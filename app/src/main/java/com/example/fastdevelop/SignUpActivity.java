@@ -10,7 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class SignUpActivity extends Activity {
+import com.example.fastdevelop.base.BaseActivity;
+
+public class SignUpActivity extends BaseActivity {
     // 调用Actvity
     @Override
     protected void onCreate(Bundle savedInstanceState) {

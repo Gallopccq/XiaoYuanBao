@@ -11,8 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.fastdevelop.base.BaseActivity;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends BaseActivity {
     // 调用Actvity
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Campus Buy</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -106,4 +106,31 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!--    我-->
+    <string name="username">学号：</string>
+    <string name="my_sign_in">我的签到</string>
+    <string name="login_out">退出登录</string>
+    <string name="profile_data">个人信息</string>
+    <string name="password_setting">密码设置</string>
+    <string name="my_share">分享给好友</string>
+    <string name="my_file">我的文件</string>
+    <string name="version">版本号:</string>
+    <string name="setting">设置</string>
+    <string name="tip_logout">您确定要退出账号吗?</string>
+    <string name="album">从相册</string>
+    <string name="photograph">拍照</string>
+    <string name="cancel">取消</string>
+    <string name="image_upload">头像已上传</string>
+    <string name="image_upload_fail">头像已上传失败</string>
+    <string name="no_permissions">您拒绝了权限许可</string>
+    <string name="title_activity_test">Test</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

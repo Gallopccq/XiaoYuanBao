@@ -1,22 +1,22 @@
 package com.example.fastdevelop;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.fastdevelop.base.BaseActivity;
 import com.example.fastdevelop.fragment.HomeFragment;
 import com.example.fastdevelop.fragment.ScrollingFragment;
-import com.example.fastdevelop.fragment.SettingsFragment;
+import com.example.fastdevelop.fragment.MineFragment;
+//import com.example.fastdevelop.home.HomeFragment;
 
 
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
+public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private ImageView imgView1,imgView2,imgView3,imgView4;
 
     // 调用Actvity
@@ -67,7 +67,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 fragment = new HomeFragment();//创建第三个Fragment
                 break;
             case R.id.image4:
-                fragment = new SettingsFragment();//创建第四个Fragment
+                fragment = new MineFragment();//创建第四个Fragment
                 break;
             default:
                 break;
