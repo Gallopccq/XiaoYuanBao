@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!-- 搜索框
+     若要修改大小，请修改EditText中的textSize
+     -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_src_text"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="12"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/translucent_edit"
+            android:hint="搜索框"
+            android:singleLine="true"
+            android:textSize="16dp" />
+        <ImageView
+            android:id="@+id/search_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/icon_search"/>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.HomeFragment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".ui.home.HomeFragment">
+
+            <!--androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/module_fragment_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView-->
+
+            <!-- 类模块
+            详情移步layout/home_class_module.xml-->
+
+            <include layout="@layout/main_shopping_eight_module" />
+            <include layout="@layout/main_shopping_goods_show"/>
+            <!--include layout="@layout/test"/-->
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

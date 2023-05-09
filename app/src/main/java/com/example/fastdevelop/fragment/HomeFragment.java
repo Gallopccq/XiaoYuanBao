@@ -1,10 +1,16 @@
 package com.example.fastdevelop.fragment;
 
+import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.annotation.NonNull;
@@ -13,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fastdevelop.R;
+import com.example.fastdevelop.fragment.model.Good;
 import com.example.fastdevelop.fragment.model.Goods;
 import com.example.fastdevelop.fragment.model.GoodsAdapter;
 import com.example.fastdevelop.home.model.IconAdapter;
@@ -26,6 +33,8 @@ public class HomeFragment extends Fragment {
     private List<IconTitleModel> iconList = new ArrayList<>();
     private List<Goods> goodsList = new ArrayList<>();
 
+    List<Good> goodList = new ArrayList<Good>();
+    GridLayout gl_channel;
     private View view;
 
     @Nullable
@@ -33,12 +42,19 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        view =  inflater.inflate(R.layout.fragment_home, container, false);
+        view =  inflater.inflate(R.layout.main_shopping, container, false);
 
         //initModuleModule();
-        initGoodsModule();
+//        initGoodsModule();
+        initGood();
 
         return view;
+    }
+
+    private void initGood() {
+        gl_channel = view.findViewById(R.id.gl_channel);
+        createDate();
+        showGoods();
     }
 
     private void initGoodsModule() {
@@ -102,6 +118,43 @@ public class HomeFragment extends Fragment {
         for(int i=0;i<iconImages.length;i++){
             IconTitleModel iconTitleModel = new IconTitleModel(iconImages[i],iconTitles[i]);
             iconList.add(iconTitleModel);
+        }
+    }
+
+    public void createDate()
+    {
+        Bitmap bitmap[] = {
+                BitmapFactory.decodeResource(getResources(), R.mipmap.mmexport1683214356021).copy(Bitmap.Config.ARGB_8888, true),
+                BitmapFactory.decodeResource(getResources(), R.mipmap.mmexport1683214356021).copy(Bitmap.Config.ARGB_8888, true),
+                BitmapFactory.decodeResource(getResources(), R.mipmap.mmexport1683214356021).copy(Bitmap.Config.ARGB_8888, true),
+                BitmapFactory.decodeResource(getResources(), R.mipmap.mmexport1683214356021).copy(Bitmap.Config.ARGB_8888, true)
+        };
+        String nm[] = {
+                "bad", "good", "very good", "great"
+        };
+        double prc[] = {6.66, 79.00, 11.99, 100.789};
+        int wt[] = {1000, 100, 17000, 20};
+        for(int i = 0;i < 4;i ++ ){
+            Good e = new Good(nm[i], prc[i], wt[i], bitmap[i]);
+            goodList.add(e);
+        }
+    }
+    @SuppressLint("SetTextI18n")
+    public void showGoods()
+    {
+        gl_channel.removeAllViews();
+        for(final Good good: goodList){
+            View view = LayoutInflater.from(this.view.getContext()).inflate(R.layout.item_good, null);
+            ImageView gd_pic = view.findViewById(R.id.good_picture);
+            TextView gd_nm = view.findViewById(R.id.good_name);
+            TextView gd_prc = view.findViewById(R.id.good_price);
+            TextView gd_clk = view.findViewById(R.id.good_click);
+            gd_pic.setImageBitmap(good.getPicture());
+            gd_nm.setText(" "+good.getName());
+            gd_nm.setTextSize(24);
+            gd_prc.setText(" ¥"+Double.toString(good.getPrice()));
+            gd_clk.setText(good.getClickTime() + "+次浏览");
+            gl_channel.addView(view);
         }
     }
 }

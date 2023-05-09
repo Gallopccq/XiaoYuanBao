@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="爱零食•注册"
+            android:text="校园宝•注册"
             android:gravity="center"
             android:textStyle="italic"
             android:textColor="#808080"
