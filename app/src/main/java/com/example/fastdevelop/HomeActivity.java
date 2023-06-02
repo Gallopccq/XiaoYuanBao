@@ -69,6 +69,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
             case R.id.image4:
                 fragment = new MineFragment();//创建第四个Fragment
                 break;
+            case R.id.image5:
+                fragment = new MineFragment();//创建第五个Fragment
             default:
                 break;
         }
