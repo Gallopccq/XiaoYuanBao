@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="@color/colorPrimary">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/title_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:text="@string/message_name"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="20sp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/back_button"-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:background="@drawable/icon_back"/>-->
+<!--        <ImageView-->
+<!--            android:id="@+id/addmore"-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:background="@drawable/icon_add"/>-->
+<!--    </RelativeLayout>-->
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight = "1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Back"
+            android:layout_margin="15dp"/>
+
+        <Button
+            android:id="@+id/addmore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Chat"
+            android:layout_margin="15dp"/>
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_imv"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/image1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="30dp"-->
+<!--            android:src="@drawable/icon_goods"/>-->
+<!--        <ImageView-->
+<!--            android:id="@+id/image2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="30dp"-->
+<!--            android:src="@drawable/icon_commission"/>-->
+<!--        <ImageView-->
+<!--            android:id="@+id/image3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="30dp"-->
+<!--            android:src="@drawable/icon_add"/>-->
+<!--        <ImageView-->
+<!--            android:id="@+id/image4"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="30dp"-->
+<!--            android:src="@drawable/icon_message"/>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/image5"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="30dp"-->
+<!--            android:src="@drawable/icon_mine"/>-->
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

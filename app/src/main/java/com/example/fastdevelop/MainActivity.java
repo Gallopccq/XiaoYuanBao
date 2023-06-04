@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.fastdevelop.base.BaseActivity;
+import com.example.fastdevelop.signature.GenerateTestUserSig;
+import com.tencent.qcloud.tuicore.TUILogin;
+import com.tencent.qcloud.tuicore.interfaces.TUICallback;
 
 
 public class MainActivity extends BaseActivity {
@@ -39,10 +42,22 @@ public class MainActivity extends BaseActivity {
                         // 获取用户名和密码
                         String strUserName = userName.getText().toString().trim();
                         String strPassWord = passWord.getText().toString().trim();
+
+                        /* Debug */
+                        final boolean DEBUG = true;
+                        if (DEBUG) {
+                            strUserName = "123456";
+                            strPassWord = "123456";
+                        }
+
                         // 判断如果用户名为"123456"密码为"123456"则登录成功
                         if (strUserName.equals("123456") && strPassWord.equals("123456") || queryAccount(strUserName,strPassWord)) {
                             Toast.makeText(MainActivity.this, "登录成功！",
                                     Toast.LENGTH_SHORT).show();
+
+                            // 链接Tencent 数据库
+                            UtilLogin(strUserName);
+
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                             startActivity(intent);
                         } else {
@@ -65,6 +80,21 @@ public class MainActivity extends BaseActivity {
                     }
                 }
         );
+    }
+
+    private void UtilLogin(String userID) {
+
+        // 在用户 UI 点击登录的时候调用
+        TUILogin.login(this.getApplication(), GenerateTestUserSig.SDKAPPID, userID, GenerateTestUserSig.genTestUserSig(userID), new TUICallback() {
+            @Override
+            public void onError(final int code, final String desc) {
+            }
+
+
+            @Override
+            public void onSuccess() {
+            }
+        });
     }
 
     private boolean queryAccount(String username,String passwd){

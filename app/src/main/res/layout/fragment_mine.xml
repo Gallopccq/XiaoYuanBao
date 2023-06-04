@@ -159,6 +159,16 @@
 
             stv:sRightIconRes="@drawable/ic_right_next" />
 
+        <com.allen.library.SuperTextView
+            android:id="@+id/shou_huo_di_zhi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            stv:sLeftTextString="收货地址"
+            stv:sLeftTextSize="18sp"
+            stv:sLeftTextColor="@color/color_000000"
+
+            stv:sRightIconRes="@drawable/ic_right_next" />
+
 
         <RelativeLayout
             android:layout_width="match_parent"

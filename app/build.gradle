@@ -51,7 +51,7 @@ dependencies {
     //implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.0-beta02"
     //implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30"
     //SmartRefreshLayout
-    //implementation "com.scwang.smartrefresh:SmartRefreshLayout:1.0.4"
+
     implementation 'androidx.appcompat:appcompat:1.0.0'                 //必须 1.0.0 以上
     implementation  'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
     implementation  'io.github.scwang90:refresh-header-classics:2.0.5'    //经典刷新头
@@ -74,5 +74,20 @@ dependencies {
     //implementation 'com.facebook.fresco:fresco:2.1.0'
     /** TextView样式布局      **/
     implementation 'com.github.lygttpod:SuperTextView:2.1.6'
+
+
+    // 集成群接龙插件
+    api "com.tencent.imsdk.tuiplugin:tuigroupnote:7.2.4126"
+    // 集成群投票插件
+    api "com.tencent.imsdk.tuiplugin:tuipoll:7.2.4126"
+    api project(':tuiconversation')
+    api project(':tuicontact')
+    api project(':tuichat')
+    //api project(':tuisearch')
+    //api project(':tuigroup')
+    //api project(':tuiofflinepush')
+//    api project(':tuicommunity')
+//    api project(':tuicallkit')
+    //api project(':tuitranslation')
 
 }

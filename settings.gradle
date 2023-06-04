@@ -15,4 +15,60 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "FastDevelop"
+// 引入上层应用模块
 include ':app'
+
+
+// 引入内部组件通信模块 (必要模块)
+include ':tuicore'
+project(':tuicore').projectDir = new File(settingsDir, '../TUIKit/TUICore/tuicore')
+
+
+// 引入 IM 组件公共模块（必要模块）
+include ':timcommon'
+project(':timcommon').projectDir = new File(settingsDir, '../TUIKit/TIMCommon/timcommon')
+
+
+// 引入聊天功能模块 (基础功能模块)
+include ':tuichat'
+project(':tuichat').projectDir = new File(settingsDir, '../TUIKit/TUIChat/tuichat')
+
+
+// 引入关系链功能模块 (基础功能模块)
+include ':tuicontact'
+project(':tuicontact').projectDir = new File(settingsDir, '../TUIKit/TUIContact/tuicontact')
+
+
+// 引入会话功能模块 (基础功能模块)
+include ':tuiconversation'
+project(':tuiconversation').projectDir = new File(settingsDir, '../TUIKit/TUIConversation/tuiconversation')
+
+
+// 引入搜索功能模块（需要购买旗舰版套餐）
+//include ':tuisearch'
+//project(':tuisearch').projectDir = new File(settingsDir, '../TUIKit/TUISearch/tuisearch')
+
+
+// 引入群组功能模块
+include ':tuigroup'
+project(':tuigroup').projectDir = new File(settingsDir, '../TUIKit/TUIGroup/tuigroup')
+
+
+// 引入离线推送功能模块
+//include ':tuiofflinepush'
+//project(':tuiofflinepush').projectDir = new File(settingsDir, '../TUIKit/TUIOfflinePush/tuiofflinepush')
+
+
+// 引入社群话题功能模块（需要购买旗舰版套餐）
+//include ':tuicommunity'
+//project(':tuicommunity').projectDir = new File(settingsDir, '../TUIKit/TUICommunity/tuicommunity')
+
+
+// 引入音视频通话功能模块
+//include ':tuicallkit'
+//project(':tuicallkit').projectDir = new File(settingsDir, '../TUIKit/TUICallKit/tuicallkit')
+
+
+// 引入聊天消息翻译模块 （需开通增值功能，请联系腾讯云商务开通）
+//include ':tuitranslation'
+//project(':tuitranslation').projectDir = new File(settingsDir, '../TUIKit/TUITranslation/tuitranslation')
