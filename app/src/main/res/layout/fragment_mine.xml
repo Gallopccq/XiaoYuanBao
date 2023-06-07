@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:fresco="http://schemas.android.com/apk/res-auto"
-    xmlns:stv="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <!--tools:context=".fragment.ProfileFragment"-->
+    android:orientation="vertical"
+    android:focusable="false"
+    android:clickable="false">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:focusable="false"
+        android:clickable="false">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/color_ffffff"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:focusable="false"
+            android:clickable="false">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -53,121 +55,178 @@
 
 
         </LinearLayout>
-        <!--LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_ffffff"
-            android:orientation="horizontal"-->
 
-        <!-- SimpleDraweeView
-         使用须知：
-        在我们平时加载图片(不管是下载还是加载本地图片…..)的时候，
-        我们经常会遇到这样一个需求，那就是当图片正在加载时应该呈现
-        正在加载时的图像，当图片加载失败时应该呈现图片加载时的图像
-        ，当我们重新加载这张图片时，应该呈现重试时图像，直到这张图
-        片加载完成。这些繁琐并且重复的如果得不到简化的话，那将是一
-        个开发人员的噩梦，现在好了，我们用 Facebook 出品的一个强
-        大的图片加载组件 Fresco 几行代码就可以搞定以上问题了。-->
-        <!--com.facebook.drawee.view.SimpleDraweeView
-            android:id="@+id/img_profile"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_margin="10dp"
-            fresco:roundAsCircle="true"
-            fresco:placeholderImage="@mipmap/head_image"
-            /-->
-
-        <!--ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_margin="10dp"
-            android:background="@mipmap/icon_user"/>
-
-
-
-            <com.allen.library.SuperTextView
-                android:id="@+id/mine_top"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-
-                stv:sLeftTextString="Campus Buy"
-                stv:sLeftTextSize="25sp"
-                stv:sRightIconRes="@drawable/iconmonstr_gear_2"
-                stv:sRightViewIsClickable="true"
-                /-->
-
-        <!--TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Campus Buy"
-            android:textSize="30sp"
-            android:gravity="left"/-->
-
-
-        <!--/LinearLayout-->
 
         <View style="@style/horizontal_line_style" />
-        <com.allen.library.SuperTextView
+
+        <RelativeLayout
             android:id="@+id/shou_cang"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            stv:sLeftTextString="收藏"
-            stv:sLeftTextSize="18sp"
-            stv:sLeftTextColor="@color/color_000000"
-            stv:sRightIconRes="@drawable/ic_right_next" />
+            android:focusableInTouchMode="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收藏"
+                android:textSize="23sp"
+                android:textColor="@color/color_000000"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:clickable="false"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_next"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:clickable="false"/>
+        </RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="收藏"
+            android:textSize="23dp"
+            android:shadowColor="@color/color_000000"
+            android:background="#f1f1f1"
+            android:textAllCaps="false"/>
 
 
 
-        <com.allen.library.SuperTextView
+
+        <RelativeLayout
             android:id="@+id/gou_wu_dan"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            stv:sLeftTextString="购物单"
-            stv:sLeftTextSize="18sp"
-            stv:sLeftTextColor="@color/color_000000"
-            stv:sRightIconRes="@drawable/ic_right_next" />
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="购物单"
+                android:textSize="23sp"
+                android:textColor="@color/color_000000"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:clickable="false"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_next"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:clickable="false"/>
+        </RelativeLayout>
 
-
-        <com.allen.library.SuperTextView
+        <RelativeLayout
             android:id="@+id/zu_ji"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            stv:sLeftTextString="足迹"
-            stv:sLeftTextSize="18sp"
-            stv:sLeftTextColor="@color/color_000000"
-            stv:sRightIconRes="@drawable/ic_right_next" />
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="足迹"
+                android:textSize="23sp"
+                android:textColor="@color/color_000000"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:clickable="false"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_next"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:clickable="false"/>
+        </RelativeLayout>
 
-
-        <com.allen.library.SuperTextView
+        <RelativeLayout
             android:id="@+id/li_shi_ding_dan"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            stv:sLeftTextString="历史订单"
-            stv:sLeftTextSize="18sp"
-            stv:sLeftTextColor="@color/color_000000"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="历史订单"
+                android:textSize="23sp"
+                android:textColor="@color/color_000000"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:clickable="false"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_next"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:clickable="false"/>
+        </RelativeLayout>
 
-            stv:sRightIconRes="@drawable/ic_right_next" />
-
-        <com.allen.library.SuperTextView
+        <RelativeLayout
             android:id="@+id/li_shi_shang_jia"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            stv:sLeftTextString="历史上架"
-            stv:sLeftTextSize="18sp"
-            stv:sLeftTextColor="@color/color_000000"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="历史上架"
+                android:textSize="23sp"
+                android:textColor="@color/color_000000"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:clickable="false"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_next"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:clickable="false"/>
+        </RelativeLayout>
 
-            stv:sRightIconRes="@drawable/ic_right_next" />
-
-        <com.allen.library.SuperTextView
+        <RelativeLayout
             android:id="@+id/shou_huo_di_zhi"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            stv:sLeftTextString="收货地址"
-            stv:sLeftTextSize="18sp"
-            stv:sLeftTextColor="@color/color_000000"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收货地址"
+                android:textSize="23sp"
+                android:textColor="@color/color_000000"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:clickable="false"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_next"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:clickable="false"/>
+        </RelativeLayout>
 
-            stv:sRightIconRes="@drawable/ic_right_next" />
 
 
         <RelativeLayout
@@ -186,14 +245,18 @@
                     android:layout_height="wrap_content"
                     android:text="@string/version"
                     android:textColor="@color/color_000000"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:focusable="false"
+                    android:clickable="false"/>
                 <TextView
                     android:id="@+id/tv_profile_version"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="V1.0.0"
                     android:textColor="@color/color_000000"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:focusable="false"
+                    android:clickable="false"/>
             </LinearLayout>
         </RelativeLayout>
 
@@ -209,4 +272,4 @@
             />
     </LinearLayout>
 
-</ScrollView>
+</LinearLayout>

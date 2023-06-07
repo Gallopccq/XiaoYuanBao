@@ -164,10 +164,11 @@
                 />
             <Spinner
                 android:id="@+id/tag_spinner"
-                android:prompt="123"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"/>
+<!--            android:prompt="123"-->
 
             <!--
             Spinner spinner = (Spinner) findViewById(R.id.tag_spinner);
