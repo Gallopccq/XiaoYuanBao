@@ -36,6 +36,7 @@
             android:name=".HomeActivity"
             android:exported="true" />
         <activity android:name=".MessageActivity"/>
+        <activity android:name=".GoodDetailActivity"/>
     </application>
 
 </manifest>

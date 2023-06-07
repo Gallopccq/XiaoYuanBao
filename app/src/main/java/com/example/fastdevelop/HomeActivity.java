@@ -73,6 +73,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         FragmentManager fm=getSupportFragmentManager();//获取Fragment的管理器
         FragmentTransaction transaction = fm.beginTransaction();// 开启一个事务
         Fragment fragment=null;
+        Intent intent=null;
         switch (v.getId()) {    //通过获取点击的id判断点击了哪个张图片
             case R.id.image1:
                 fragment = new HomeFragment(); //创建第一个Fragment
@@ -81,8 +82,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 fragment = new ScrollingFragment();//创建第二个Fragment
                 break;
             case R.id.image3:
-                fragment = new HomeFragment();//创建第三个Fragment
-                break;
+                intent = new Intent(HomeActivity.this, GoodDetailActivity.class);
+                startActivity(intent);//创建第三个Fragment
+                return ;
             case R.id.image4:
 //                fragment = new MineFragment();
 //                List<Fragment> fragments = new ArrayList<>();
@@ -99,7 +101,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 //                mainViewPager.setAdapter(fragmentAdapter);
 ////                mainViewPager.setCurrentItem(0, false);
 ////                fragment = new TUIConversationFragment();//创建第四个Fragment
-                Intent intent = new Intent(HomeActivity.this, MessageActivity.class);
+                intent = new Intent(HomeActivity.this, MessageActivity.class);
                 startActivity(intent);
                 return;
             case R.id.image5:
