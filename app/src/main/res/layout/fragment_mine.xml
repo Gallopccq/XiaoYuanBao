@@ -85,14 +85,7 @@
                 android:focusable="false"
                 android:clickable="false"/>
         </RelativeLayout>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="收藏"
-            android:textSize="23dp"
-            android:shadowColor="@color/color_000000"
-            android:background="#f1f1f1"
-            android:textAllCaps="false"/>
+
 
 
 
