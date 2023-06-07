@@ -112,7 +112,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.shou_cang:
-                startActivity(new Intent(getActivity(), SignUpActivity.class));
+//                startActivity(new Intent(getActivity(), SignUpActivity.class));
                 break;
             case R.id.gou_wu_dan:
 //                startActivity(new Intent(MineFragment.this,GouWuDanActivity.class));
