@@ -16,6 +16,9 @@ import com.example.fastdevelop.signature.GenerateTestUserSig;
 import com.tencent.qcloud.tuicore.TUILogin;
 import com.tencent.qcloud.tuicore.interfaces.TUICallback;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends BaseActivity {
     // 调用Actvity
@@ -64,7 +67,6 @@ public class MainActivity extends BaseActivity {
                             Toast.makeText(MainActivity.this, "请输入正确的用户名或密码！",
                                     Toast.LENGTH_SHORT).show();
                         }
-
                     }
                 }
         );
@@ -99,6 +101,13 @@ public class MainActivity extends BaseActivity {
 
     private boolean queryAccount(String username,String passwd){
         boolean result=false;
+
+        List<String> weUsers = new ArrayList<>();
+        weUsers.add("wym");weUsers.add("htj");weUsers.add("hd");weUsers.add("qcc");weUsers.add("zjw");
+
+
+        if(weUsers.contains(username)) result=true;
+
         //创建游标对象
         /*Cursor cursor = db.query("user", new String[]{"username","password"}, "username=?", new String[]{username}, null, null, null);
         //利用游标遍历所有数据对象
