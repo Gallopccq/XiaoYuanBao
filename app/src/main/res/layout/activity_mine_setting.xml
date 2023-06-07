@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+
+        android:orientation="horizontal"
+        >
+        <!--com.allen.library.SuperTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:sLeftIconRes="@drawable/icon_back"
+            app:sLeftIconHeight="20dp"
+            app:sLeftIconWidth="20dp"
+            /-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="设置"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_back"/>
+            <TextView
+                android:id="@+id/accusation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:textSize="18dp"
+                android:layout_centerVertical="true"
+                android:text="保存"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!--线性布局-->
+    <LinearLayout
+        android:id="@+id/UserNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textSize="28sp"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+
+            android:text="用户名"/>
+        <!--用户名输入-->
+        <EditText
+            android:id="@+id/PhoneNumEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:padding="15dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/translucent_edit"
+            android:hint="输入用户名"
+            android:textSize="24dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/PhoneNumLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textSize="28sp"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:text="手机号"/>
+        <!--用户名输入-->
+        <EditText
+            android:id="@+id/UserNameEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:padding="15dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/translucent_edit"
+            android:hint="输入手机号"
+            android:textSize="24dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+</LinearLayout>

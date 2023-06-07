@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.25" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="商品" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="事务" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.25" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/plus_head"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <!--商品名-->
+        <LinearLayout
+            android:id="@+id/ItemNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--商品名输入-->
+            <EditText
+                android:id="@+id/ItemNameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/translucent_edit"
+                android:hint="输入商品名"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="24dp" />
+
+        </LinearLayout>
+
+        <!--加图片还没调整-->
+        <LinearLayout
+            android:id="@+id/Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/choose_image_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加商品图片" />
+
+            <ImageView
+                android:id="@+id/my_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="374dp" />
+
+
+        </LinearLayout>
+
+        <!--描述-->
+        <LinearLayout
+            android:id="@+id/DescriptionLayout"
+            android:layout_width="428dp"
+            android:layout_height="324dp"
+            android:orientation="horizontal">
+
+            <!--描述输入-->
+
+            <EditText
+                android:id="@+id/DescriptionEdit"
+                android:layout_width="374dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/translucent_edit"
+                android:gravity="top|left"
+                android:hint="商品描述"
+                android:inputType="textMultiLine"
+                android:maxLength="16"
+                android:maxLines="10"
+                android:minLines="5"
+                android:padding="15dp"
+                android:singleLine="false"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <!--价格-->
+        <LinearLayout
+            android:id="@+id/PriceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--二次密码输入-->
+
+            <EditText
+                android:id="@+id/PriceEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/translucent_edit"
+                android:hint="输入价格（¥）"
+                android:maxLength="16"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <!--标签-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/selected_tag_name"
+                android:text="选择标签："
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/translucent_edit"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="22dp"
+                />
+            <Spinner
+                android:id="@+id/tag_spinner"
+                android:prompt="123"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"/>
+
+            <!--
+            Spinner spinner = (Spinner) findViewById(R.id.tag_spinner);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+            R.array.tag_options, android.R.layout.simple_spinner_dropdown_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinner.setAdapter(adapter);
+            -->
+
+
+        </LinearLayout>
+
+
+        <!--嵌套线性布局-->
+        <LinearLayout
+            android:id="@+id/ButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/BackLoginButton"
+                android:layout_width="322dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/translucent_button"
+                android:padding="15dp"
+                android:text="清空"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                />
+
+            <Button
+                android:id="@+id/BackLoginButton2"
+                android:layout_width="322dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/translucent_button"
+                android:padding="15dp"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
